@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: ppq330s2c-java-quarkus-gitops
+  description: This is GitOps manifest for ppq330s2c-java-quarkus   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: ppq330s2c-java-quarkus
+    janus-idp.io/tekton: ppq330s2c-java-quarkus 
+    backstage.io/kubernetes-id: ppq330s2c-java-quarkus 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:ppq330s2c-java-quarkus
